@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список студентов</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+      <div class="students-inner">
+        <form action="" class="students-form" id="students-form">
+          <label for="student-name" id="name-label">Имя студента:
+          <input type="text" class="students-inputs" id="student-name" placeholder="Имя" >
+          </label>
+          <label for="student-surname" id="surname-label">Фамилия студента:
+          <input type="text" class="students-inputs" id="student-surname" placeholder="Фамилия" >
+          </label>
+          <label for="student-otchestvo" id="middlename-label">Отчество студента:
+            <input type="text" class="students-inputs" id="student-otchestvo" placeholder="Отчество" >
+          </label>
+          <label for="student-bd" id="bd-label">Дата рождения студента:
+            <input type="date" class="students-inputs" id="student-bd" >
+          </label>
+          <label for="student-year-of-study" id="year-of-study-label">Год начала обучения студента:
+            <input type="date" class="students-inputs" id="student-year-of-study" >
+          </label>
+          <label for="student-faculty" id="faculty-label">Факультет студента:
+            <input type="text" class="students-inputs" id="student-faculty" placeholder="Факультет" >
+          </label>
+          <button class="btn" id="form-btn">Добавить студента</button>
+        </form>
+        <div class="students-table" id="students-table">
+          <h2 class="table-h2">Список студентов:</h2>
+          <div class="table-info">
+            <span class="table-info-sort">Сортировка по алфавиту/по возрастанию</span>
+            <div class="table-info-btns">
+              <button class="table-btn" id="surname-btn">По фамилии</button>
+              <button class="table-btn" id="name-btn">По имени</button>
+              <button class="table-btn" id="middlename-btn">По отчеству</button>
+              <button class="table-btn" id="faculty-btn">Факультет</button>
+              <button class="table-btn" id="bd-btn">Дата рождения</button>
+              <button class="table-btn" id="years-btn">Годы обучения</button>
+            </div>
+            <h2>Фильтрация списка:</h2>
+            <div class="table-info-filters">
+              <form action="" class="filter-form" id="filter-form">
+                <label for="surname-filter">
+                  По фамилии:
+                  <input type="text" id="surname-filter">
+                </label>
+                <label for="name-filter">
+                  По имени:
+                  <input type="text" id="name-filter">
+                </label>
+                <label for="middlename-filter">
+                  По отчеству:
+                  <input type="text" id="middlename-filter">
+                </label>
+                <label for="faculty-filter">
+                  По факультету:
+                  <input type="text" id="faculty-filter">
+                </label>
+                <label for="startingYear-filter">
+                  Год начала обучения:
+                  <input type="number" id="startingYear-filter">
+                </label>
+                <label for="graduationYear-filter">
+                  Год окончания обучения:
+                  <input type="number" id="graduationYear-filter" maxlength="4" minlength="4">
+                </label>
+                <button class="table-btn">Отфильтровать/обновить список</button>
+              </form>
+            </div>
+          </div>
+          <div class="table" id="table">
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
